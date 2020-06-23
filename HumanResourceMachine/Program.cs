@@ -10,13 +10,13 @@ namespace HumanResourceMachine
         {
             try
             {
-                start(1, 2, 3);
+                start(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
                 //Skriv dina instruktioner här.
 
-                
-                stop(3, 2, 1);
+                start(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
 
-            } catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine(ex.Message);
@@ -51,14 +51,14 @@ namespace HumanResourceMachine
 
         static void stop(params int[] rightSequence)
         {
-            if(rightSequence.Length != OUT.Count)
+            if (rightSequence.Length != OUT.Count)
             {
                 throw new Exception($"FEL! OUT innehåller {OUT.Count} saker och rätt svar innehåller {rightSequence.Length}.");
             }
 
-            for(var index = 0; index < rightSequence.Length; index++)
+            for (var index = 0; index < rightSequence.Length; index++)
             {
-                if(rightSequence[index] != OUT[index])
+                if (rightSequence[index] != OUT[index])
                 {
                     throw new Exception($"FEL på position {index}! OUT innehåller {rightSequence[index]}  och rätt svar innehåller {OUT[index]}.");
                 }
